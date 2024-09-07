@@ -61,12 +61,7 @@
    git commit -m "<commit_message>"
    ```
 5. Push changes to the remote repository
-
    ```sh
-   # first push on the branch, setting the upstream branch
-   git push -u origin <branch_name>
-
-   # subsequent pushes
    git push
    ```
 
@@ -95,6 +90,14 @@
 6. Delete a local branch
    ```sh
    git branch -d <branch_name>
+   ```
+7. Push a new branch to the remote repository
+   ```sh
+   git push -u origin <branch_name>
+   ```
+8. Delete a branch from the remote repository
+   ```sh
+   git push origin -d <branch_name>
    ```
 
 ### Additional References
