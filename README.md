@@ -1,102 +1,29 @@
 # git-tutorial
 
-### User Configuration
+### Instructions
+Follow the tasks below to test your Git knowledge. Perform each step as specified and answer the questions accordingly.
 
-1. Set your identity
-   ```sh
-   git config --global user.name "your_name"
-   git config --global user.email "your_email@example.com"
-   ```
-   > To keep your email address private, use your GitHub-provided `no-reply` email address.
-2. Set default commit branch
-   ```sh
-   git config --global init.defaultBranch main
-   ```
-3. Check your settings
-   ```sh
-   git config --list
-   ```
+1. Create a new branch from `task` named `b_<username>`
 
-### SSH Key Setup
+   - Question: What command did you use to create and switch to the new branch?
 
-1. Generate a new SSH key
-   ```sh
-   ssh-keygen -t ed25519 -C "your_email@example.com"
-   ```
-2. Copy the SSH public key to your clipboard
+2. Create a folder named `f_<username>` in the `task` folder with a file named `<username>.txt` containing the text `Hello Git!`
 
-   ```sh
-   cat ~/.ssh/id_ed25519.pub
-   ```
+   - Question: What command did you use to create the folder and the file?
 
-   > Then select and copy the contents of the `id_ed25519.pub` file displayed in the terminal to your clipboard.
+3. Stage and commit the changes with the commit message `init(<branch_name>): set up git tutorial task content`
 
-3. Add a new SSH authentication key to your account
+   - Question: What was the exact commit command used?
 
-### Basic Operations
+4. Send a pull request to the `task` branch
 
-1. Clone a repository
-   ```sh
-   git clone <repository_url>
-   ```
-2. Pull changes from the remote repository
-   ```sh
-   git pull
-   ```
-3. Stage files in the current directory
+   - Question: Which steps did you take on GitHub to create the pull request?
 
-   ```sh
-   # stage a specific file
-   git add <file_name>
+5. Wait for merging
 
-   # stage multiple specific files
-   git add <file_name1> <file_name2>
+   - Question: How will you know when your pull request has been successfully merged?
 
-   # stage all changes in the current directory
-   git add .
-   ```
+6. Delete your branch after merging
 
-4. Commit your changes
-   ```sh
-   git commit -m "<commit_message>"
-   ```
-5. Push changes to the remote repository
+   - Question: What command did you use to delete your branch after merging?
 
-   ```sh
-   # first push on the branch, setting the upstream branch
-   git push -u origin <branch_name>
-
-   # subsequent pushes
-   git push
-   ```
-
-### Branch Operations
-
-1. Switch to an existing branch
-   ```sh
-   git checkout <branch_name>
-   ```
-2. Create a new branch from the current branch and switch to it
-   ```sh
-   git checkout -b <new_branch_name>
-   ```
-3. Create a new branch from a specific branch and switch to it
-   ```sh
-   git checkout -b <new_branch_name> <branch_name>
-   ```
-4. List all branches
-   ```sh
-   git branch
-   ```
-5. Rename the current branch
-   ```sh
-   git branch -m <new_branch_name>
-   ```
-6. Delete a local branch
-   ```sh
-   git branch -d <branch_name>
-   ```
-
-### Additional References
-
-For more information, visit: [Git/GitHub | userwei's Note](https://note.userwei.com/docs/setup/tool/git/)
