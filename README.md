@@ -1,102 +1,95 @@
 # git-tutorial
 
-### User Configuration
+> [!WARNING]  
+> The `task_ans` branch contains answers for `task`. To ensure effective learning and prevent easy access, delete this branch before giving out the tasks.
 
-1. Set your identity
-   ```sh
-   git config --global user.name "your_name"
-   git config --global user.email "your_email@example.com"
-   ```
-   > To keep your email address private, use your GitHub-provided `no-reply` email address.
-2. Set default commit branch
-   ```sh
-   git config --global init.defaultBranch main
-   ```
-3. Check your settings
-   ```sh
-   git config --list
-   ```
 
-### SSH Key Setup
+### Instructions
+Follow the tasks below to test your Git knowledge. Perform each step as specified and answer the questions accordingly.
 
-1. Generate a new SSH key
-   ```sh
-   ssh-keygen -t ed25519 -C "your_email@example.com"
-   ```
-2. Copy the SSH public key to your clipboard
+1. Create a new branch from `task` named `b_<username>`
 
-   ```sh
-   cat ~/.ssh/id_ed25519.pub
-   ```
+   - Question: What command did you use to create and switch to the new branch?
 
-   > Then select and copy the contents of the `id_ed25519.pub` file displayed in the terminal to your clipboard.
+     <details>
+     <summary>Answer</summary>
 
-3. Add a new SSH authentication key to your account
+     ```sh
+     git checkout task
+     git checkout -b b_<username>
+     # or
+     git checkout -b b_<username> task
+     ```
+     </details>
 
-### Basic Operations
+2. Create a folder named `f_<username>` in the `task` folder with a file named `<username>.txt` containing the text `Hello Git!`
 
-1. Clone a repository
-   ```sh
-   git clone <repository_url>
-   ```
-2. Pull changes from the remote repository
-   ```sh
-   git pull
-   ```
-3. Stage files in the current directory
+   - Question: What command did you use to create the folder and the file?
 
-   ```sh
-   # stage a specific file
-   git add <file_name>
+     <details>
+     <summary>Answer</summary>
 
-   # stage multiple specific files
-   git add <file_name1> <file_name2>
+     ```sh
+     mkdir task/f_<username>
+     echo "Hello Git!" > task/f_<username>/<username>.txt
+     ```
+     </details>
 
-   # stage all changes in the current directory
-   git add .
-   ```
+3. Stage and commit the changes with the commit message `init(<branch_name>): set up git tutorial task content`
 
-4. Commit your changes
-   ```sh
-   git commit -m "<commit_message>"
-   ```
-5. Push changes to the remote repository
+   - Question: What was the exact commit command used?
 
-   ```sh
-   # first push on the branch, setting the upstream branch
-   git push -u origin <branch_name>
+     <details>
+     <summary>Answer</summary>
 
-   # subsequent pushes
-   git push
-   ```
+     ```sh
+     git add .
+     git commit -m "init(b_<username>): set up git tutorial task content"
+     ```
+     </details>
 
-### Branch Operations
+4. Send a pull request to the `task` branch
 
-1. Switch to an existing branch
-   ```sh
-   git checkout <branch_name>
-   ```
-2. Create a new branch from the current branch and switch to it
-   ```sh
-   git checkout -b <new_branch_name>
-   ```
-3. Create a new branch from a specific branch and switch to it
-   ```sh
-   git checkout -b <new_branch_name> <branch_name>
-   ```
-4. List all branches
-   ```sh
-   git branch
-   ```
-5. Rename the current branch
-   ```sh
-   git branch -m <new_branch_name>
-   ```
-6. Delete a local branch
-   ```sh
-   git branch -d <branch_name>
-   ```
+   - Question: Which steps did you take on GitHub to create the pull request?
 
-### Additional References
+     <details>
+     <summary>Answer</summary>
 
-For more information, visit: [Git/GitHub | userwei's Note](https://note.userwei.com/docs/setup/tool/git/)
+     1. Push your branch to the remote repository
+
+        ```sh
+        git push -u origin b_<username>
+        ```
+
+     2. Go to your repository on GitHub
+     3. Click on `Compare & pull request`
+     4. Ensure the base branch is `task` and the compare branch is `b_<username>`
+     5. Add a title and description for the pull request, then click `Create pull request`
+     </details>
+
+5. Wait for merging
+
+   - Question: How will you know when your pull request has been successfully merged?
+
+     <details>
+     <summary>Answer</summary>
+
+     - You will see a message indicating that the pull request has been merged on GitHub, and the branch will be marked as merged
+     - You may also receive a notification via email or GitHub notifications if enabled
+     </details>
+
+6. Delete your branch after merging
+
+   - Question: What command did you use to delete your branch after merging?
+
+     <details>
+     <summary>Answer</summary>
+
+     ```sh
+     # delete the branch locally
+     git branch -d b_<username>
+
+     # delete the branch from the remote repository
+     git push origin -d b_<username>
+     ```
+     </details>
