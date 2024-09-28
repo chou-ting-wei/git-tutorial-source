@@ -81,7 +81,7 @@
    ```
 4. List all branches
    ```sh
-   git branch
+   git branch -a
    ```
 5. Rename the current branch
    ```sh
