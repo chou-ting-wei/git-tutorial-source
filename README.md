@@ -23,6 +23,7 @@
    ```sh
    ssh-keygen -t ed25519 -C "your_email@example.com"
    ```
+   > To keep your email address private, use your GitHub-provided `no-reply` email address.
 2. Copy the SSH public key to your clipboard
 
    ```sh
