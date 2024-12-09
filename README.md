@@ -18,6 +18,8 @@ Follow the tasks below to test your Git knowledge. Perform each step as specifie
 
      </details>
 
+        > Ensure the option `Copy the main branch only` is unchecked to include all branches in the forked repository.
+
 2. Clone the forked repository
 
    - Question: What command did you use to clone the repository?
